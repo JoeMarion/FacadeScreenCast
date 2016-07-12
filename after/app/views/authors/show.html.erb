@@ -1,0 +1,41 @@
+<div class="profile-container">
+  <h1><%= @book_facade.author.name %></h1>
+  <div class="books-list">
+    <div class="published">
+      <h1 class="title">Published Books</h1>
+      <ul>
+        <% @book_facade.published.each do |p| %>
+          <li class="desc"><%= "Title: #{p.title}, genre: #{p.genre}" %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="unpublished">
+      <h1 class="title">Unpublished Books</h1>
+      <ul>
+        <% @book_facade.unpublished.each do |p| %>
+          <li class="desc"><%= "Title: #{p.title}, genre: #{p.genre}" %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="fiction">
+      <h1 class="title">Fiction</h1>
+      <ul>
+        <% @book_facade.fiction.each do |p| %>
+          <li class="desc"><%= "Title: #{p.title}, genre: #{p.genre}" %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="non-fiction">
+      <h1 class="title">Non-fiction</h1>
+      <ul>
+        <% @book_facade.nonfiction.each do |p| %>
+          <li class="desc"><%= "Title: #{p.title}, genre: #{p.genre}" %></li>
+        <% end %>
+      </ul>
+    </div>
+
+  </div>
+</div>
